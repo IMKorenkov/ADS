@@ -1,0 +1,178 @@
+﻿@{
+    ViewBag.Title = "ADS - Фазовый портрет аттрактора";
+    var option = new AjaxOptions()
+    {
+        Url = Url.Action("saveFPA")
+    };
+}
+
+@section css{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+}
+
+@section context{
+
+
+
+<div class="row" style="width: 100%;">
+        <div class="col-9">
+            <canvas style="width: 100%; height: 100%; background-color: black;" id="windowForVizualization"></canvas>
+        </div>
+        <div class="col-3">
+            <form>
+                <div class="mb-3"></div>
+                <div class="md-3 mb-3">
+
+                    <div class="btn-group" role="group" aria-label="Basic example" style="align-self: center;">
+                        <button 
+                            type="button" 
+                            class="btn btn-success" 
+                            v-on:click="doStart()" 
+                            v-if="!isPlay"
+                            title="Запустить траекторию">
+                            <i class="fa fa-play"></i></button>
+                        <button 
+                            type="button" 
+                            class="btn btn-danger" 
+                            v-on:click="doStart()" 
+                            v-else>
+                            <i class="fa fa-stop"></i></button>
+                        <button 
+                            type="button" 
+                            class="btn btn-info" 
+                            v-on:click="savePage('image/png')"
+                            title="Скачать картинку">
+                            <i class="fa fa-save"></i></button>
+                        <button 
+                            type="button" 
+                            class="btn btn-info" 
+                            title="Вывести параметры"
+                            v-on:click="setCodeAttractor()">
+                            <i class="fa fa-code"></i></button>
+                        <button 
+                            type="button" 
+                            class="btn btn-secondary" 
+                            v-on:click="clrscr()" 
+                            title="Вывести параметры">
+                            <i class="fa fa-eraser"></i></button>
+                        <button 
+                            type="reset" 
+                            class="btn btn-secondary" 
+                            title="Форма к начальным параметрам"
+                            v-on:click="clrscr()">
+                            <i class="fa fa-window-close-o"></i></button>
+                        <button 
+                            type="button" 
+                            class="btn btn-warning" 
+                            v-on:click="setRelationAttraktor()"
+                            title="Вывести аттрактор сразу">
+                            <i class="fa fa-bolt"></i></button>
+                        <button 
+                            type="button" 
+                            class="btn btn-warning" 
+                            v-on:click="doServes()"
+                            title="Вывести аттрактор сразу">
+                            <i class="fa fa-bolt"></i></button>
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
+                    <select class="form-control" aria-label="Default select example">
+                        <option value="1">Система Лоренца</option>
+                    </select>
+                </div>
+                <div class="input-group input-group-sm" v-for="(i, k) in params">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">{{k}}</span>
+                    <input type="number" step="0.0001" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-sm" v-bind:value="i" v-on:input="setParams(k)">
+                </div>
+
+                <div class="mb-3 md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">точка:</span>
+                        <input type="text" class="form-control" placeholder="x = " v-bind:value="startPoint.x">
+                        <input type="text" class="form-control" placeholder="y = " v-bind:value="startPoint.y">
+                        <input type="text" class="form-control" placeholder="z = " v-bind:value="startPoint.z">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <select class="form-control" aria-label="Default select example">
+                        <option value="1">Метод Рунге-Кутты 4-го порядка</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Колличество точек в траектории: </span>
+                    <input type="number" step="100" class="form-control" placeholder="10000" v-model="countPoint">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Пропустить первых: </span>
+                    <input type="number" step="100" class="form-control" placeholder="10000"
+                        v-model="countPointsNoShow">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Шаг интегрирования: </span>
+                    <input type="number" step="0.0001" class="form-control" placeholder="0.0001"
+                        v-model="integratioStep">
+                </div>
+
+                <div class="mb-3 md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">Цвет траектории</span>
+                        <input type="color" class="form-control" v-model="colorLine">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text">Цвет фона</span>
+                        <input type="color" class="form-control" v-model="colorBackGround">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-text">Ширина изображения: </span>
+                    <input 
+                        type="number" 
+                        step="10" 
+                        class="form-control" 
+                        placeholder="400"
+                        v-model="sizeX">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Высота изображения: </span>
+                    <input 
+                        type="number" 
+                        step="10" 
+                        class="form-control" 
+                        placeholder="400"
+                        v-model="sizeY">
+                </div>
+                <div class="mb-3">
+                    
+                </div>
+                <div class="mb-3 md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">Шрифт</span>
+                        <input 
+                            type="number" 
+                            step="1" 
+                            class="form-control" 
+                            placeholder="16"
+                            v-model="sizeText">
+                        <input 
+                            type="color" 
+                            class="form-control" 
+                            v-model="colorText">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+}
+
+@section js{
+    <script src="~/Scripts/Math/DynamicSystem.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.30/vue.global.min.js"></script>
+    
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Scripts/ScriptPage/attractor_phase_portrait.js"></script>
+}

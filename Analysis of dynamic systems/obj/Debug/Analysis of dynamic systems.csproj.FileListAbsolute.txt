@@ -1,0 +1,41 @@
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\Analysis of dynamic systems.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\Analysis of dynamic systems.pdb
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\Antlr3.Runtime.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\EntityFramework.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\Newtonsoft.Json.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Net.Http.Formatting.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Web.Http.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Web.Http.WebHost.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Web.Mvc.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Web.Optimization.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Web.Providers.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Web.Razor.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Web.WebPages.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Web.WebPages.Razor.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\WebGrease.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\EntityFramework.xml
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\Newtonsoft.Json.xml
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Net.Http.Formatting.xml
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Web.Http.xml
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Web.Http.WebHost.xml
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Web.Mvc.xml
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Web.Razor.xml
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Web.WebPages.xml
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\System.Web.WebPages.Razor.xml
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\ru\EntityFramework.resources.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\ru\System.Net.Http.Formatting.resources.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\ru\System.Web.Http.resources.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\ru\System.Web.Http.WebHost.resources.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\ru\System.Web.Providers.resources.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\ru\System.Web.Razor.resources.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\obj\Debug\Analysis of dynamic systems.csprojResolveAssemblyReference.cache
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\obj\Debug\Analysis of dynamic systems.dll
+C:\Users\Иван\Desktop\Project\Analysis of dynamic systems\Analysis of dynamic systems\obj\Debug\Analysis of dynamic systems.pdb
