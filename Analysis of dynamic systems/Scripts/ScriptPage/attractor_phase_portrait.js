@@ -112,6 +112,11 @@ app = Vue.createApp({
             this.activSystems.CONST_H = this.integratioStep;
             this.startPoint = new Point(0.02, 0.0, 0.0);
         },
+        a: function(){
+            let r = this.activSystems.getLyapynovExponent();
+            alert(r);
+        },
+
         drawNextPoint: function () {
             if(this.isPlay){
                 this.startPoint = this.activSystems.getNextPoint(this.startPoint, this.integratioStep);

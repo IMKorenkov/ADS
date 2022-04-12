@@ -48,4 +48,24 @@ function DynamicalSystems(fx, fy, fz) {
 
         return newPoint;
     }
+
+    this.getLyapynovExponent = function () {
+        let EPSILON = 0.001,
+            p = new Point(0.2, 0, 0),
+            pc = new Point(0.2, 0 + EPSILON, 0),
+            s = 0,
+            countPoints = 1000000,
+            l = 1;
+        for(let i = 0; i < countPoints; i++){
+            p = this.getNextPoint(p);
+            pc = this.getNextPoint(pc);
+            pc.x -= p.x; pc.y -= p.y; pc.z -= p.z;
+            l = pc.length();
+            s += Math.log(l/EPSILON);
+            pc.x = p.x + pc.x/l*EPSILON;
+            pc.y = p.y + pc.y/l*EPSILON;
+            pc.z = p.z + pc.z/l*EPSILON;
+        }
+        return s/(countPoints*EPSILON);
+    };
 }
