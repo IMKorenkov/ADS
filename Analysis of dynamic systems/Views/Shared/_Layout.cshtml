@@ -35,7 +35,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @Html.RouteLink("Фазовый портрет аттрактора", new { controller = "Calculation", action = "attractor_phase_portrait" }, new { @class = "dropdown-item" })
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Ляпуновский показатель</a>
+                        @Html.RouteLink("Старший Ляпуновский показатель", new { controller = "Calculation", action = "lyapynov_exponent" }, new { @class = "dropdown-item" })
                     </div>
                 </li>
                 <li class="nav-item">

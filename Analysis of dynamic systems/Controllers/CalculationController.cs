@@ -21,6 +21,11 @@ namespace Analysis_of_dynamic_systems.Controllers
             return View();
         }
 
+        public ActionResult lyapynov_exponent()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult saveFPA(string imgBase64)
         {

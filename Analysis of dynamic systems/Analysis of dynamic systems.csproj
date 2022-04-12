@@ -208,6 +208,7 @@
     <Content Include="Scripts\Math\DynamicSystem.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\ScriptPage\attractor_phase_portrait.js" />
+    <Content Include="Scripts\ScriptPage\lyapynov_exponent.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -224,6 +225,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Calculation\attractor_phase_portrait.cshtml" />
+    <Content Include="Views\Calculation\lyapynov_exponent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
